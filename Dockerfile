@@ -6,6 +6,8 @@ RUN apk update && apk add --no-cache \
     && addgroup lynx \
     && adduser -G lynx -s /bin/sh -D lynx
 
+USER lynx
+
 ENTRYPOINT ["lynx"]
 
 LABEL org.opencontainers.image.title="lynx" \
